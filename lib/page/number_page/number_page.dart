@@ -15,18 +15,20 @@ class NumberPage extends StatelessWidget {
         title: const Text("Number Page"),
         leading: IconButton(icon: const Icon(Icons.arrow_back), onPressed: Get.back),
       ),
-      body: Column(
-        children: [
-          Obx(
+      body: Center(
+        child: Column(
+          children: [
+            Obx(
               () => Text("${CountController.to.count.value}")
-          ),
+            ),
 
-          TextButton(
-            onPressed: CountController.to.increment, 
-            child: const Text("Number++")
-          ),
+            TextButton(
+              onPressed: CountController.to.increment, 
+              child: const Text("Number++")
+            ),
 
-        ],
+          ],
+        ),
       ),
     );
   }
